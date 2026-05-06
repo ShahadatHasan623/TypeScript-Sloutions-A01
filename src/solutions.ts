@@ -1,4 +1,4 @@
-//Problem-01
+//?Problem-01
 //Even Number Array
 const isEven:number[] =[]
 const filterEvenNumbers=(even:number[])=>{
@@ -11,4 +11,14 @@ const filterEvenNumbers=(even:number[])=>{
 }
 
 const even =filterEvenNumbers([1, 2, 3, 4, 5, 6])
-console.log(even);
+// console.log(even);
+
+//?Problem-02
+//reverseString
+
+function reverseString(revers:string){
+    const reversingString = revers.split("").reverse().join("")
+    // console.log(reversingString);
+}
+
+reverseString("typescript")
