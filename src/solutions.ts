@@ -1,5 +1,5 @@
 //?Problem-01
-//Even Number Array
+
 const isEven: number[] = [];
 const filterEvenNumbers = (even: number[]) => {
   even.map((n: number) => {
@@ -37,34 +37,27 @@ const typeCheck = checkType(20);
 // console.log(typeCheck);
 
 //?Problem-04
-/**
- * Write a generic function getProperty that takes an object and a key, then returns the value of that key. Use constraints to ensure the key exists on the object.
- */
 
 type User = {
   id: number;
-  name: string;
-  age: number;
+  Name: string;
+  Age: number;
 };
 
 const user: User = {
   id: 1,
-  name: "Shahadat",
-  age: 20,
+  Name: "Shahadat",
+  Age: 20,
 };
 
 const getProperty = <X>(obj: X, key: keyof X) => {
   return obj[key];
 };
 
-const property = getProperty(user, "name");
+const property = getProperty(user, "Name");
 // console.log(property);
 
 //?Problem -05
-
-/**
- * Define an interface Book with properties title, author, and publishedYear. Create a function toggleReadStatus that accepts a Book object and returns a new object with an added isRead property (boolean), defaulting to true.
- */
 
 interface Book {
   title: string;
@@ -78,9 +71,36 @@ const myBook: Book = {
   publishedYear: 2024,
 };
 
-const toggleReadStatus =(book:Book)=>{
-   return {...book,
-    isRead:true}
+const toggleReadStatus = (book: Book) => {
+  return { ...book, isRead: true };
+};
+const bookCreator = toggleReadStatus(myBook);
+// console.log(bookCreator);
+
+//?Problem -06
+
+class Person {
+  name: string;
+  age: number;
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+  getDetails() {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+  }
 }
-const bookCreator = toggleReadStatus(myBook)
-console.log(bookCreator);
+
+class Student extends Person {
+  grade: string;
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
+    this.grade = grade;
+  }
+  getDetails() {
+    console.log(`Name: ${this.name}, Age: ${this.age} ,Grade: ${this.grade}`);
+  }
+}
+
+const student =new Student("Alice", 20, "A")
+student.getDetails()
