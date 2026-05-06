@@ -22,3 +22,17 @@ function reverseString(revers:string){
 }
 
 reverseString("typescript")
+
+//?Problem -03
+//check of type
+
+const checkType =(type:number | string)=>{
+    if(typeof type === "number"){
+        return  "Number";
+    }
+    else{
+        return  "String"
+    }
+}
+const typeCheck = checkType(20)
+// console.log(typeCheck);
