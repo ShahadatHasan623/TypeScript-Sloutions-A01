@@ -36,3 +36,29 @@ const checkType =(type:number | string)=>{
 }
 const typeCheck = checkType(20)
 // console.log(typeCheck);
+
+//?Problem-04
+/**
+ * Write a generic function getProperty that takes an object and a key, then returns the value of that key. Use constraints to ensure the key exists on the object.
+ */
+
+type User ={
+    id:number,
+    name:string,
+    age:number
+}
+
+const user:User={
+    id:1,
+    name:"Shahadat",
+    age:20
+}
+
+const getProperty =<X>(obj:X , key:keyof X)=>{
+
+    return obj[key]
+
+}
+
+const property = getProperty(user,"name")
+console.log(property);
