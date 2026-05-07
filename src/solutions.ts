@@ -103,4 +103,19 @@ class Student extends Person {
 }
 
 const student =new Student("Alice", 20, "A")
-student.getDetails()
+// student.getDetails()
+
+//?Problem-07
+
+const getIntersection =(arr1:number[],arr2:number[])=>{
+  const element:number[] =[]
+  for(let num of arr1){
+    if(arr2.includes(num)){
+      element.push(num)
+    }
+  }
+  return element
+}
+
+const arrNumber =getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
+console.log(arrNumber);
