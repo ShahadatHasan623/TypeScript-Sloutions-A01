@@ -11,17 +11,18 @@ const filterEvenNumbers = (even: number[]) => {
 };
 
 const even = filterEvenNumbers([1, 2, 3, 4, 5, 6]);
-// console.log(even);
+
 
 //?Problem-02
 //reverseString
 
 function reverseString(revers: string) {
   const reversingString = revers.split("").reverse().join("");
-  // console.log(reversingString);
+  return reversingString
 }
 
-reverseString("typescript");
+const reverse=reverseString("typescript");
+
 
 //?Problem -03
 //check of type
@@ -34,7 +35,7 @@ const checkType = (type: number | string) => {
   }
 };
 const typeCheck = checkType(20);
-// console.log(typeCheck);
+
 
 //?Problem-04
 
@@ -55,7 +56,7 @@ const getProperty = <X>(obj: X, key: keyof X) => {
 };
 
 const property = getProperty(user, "Name");
-// console.log(property);
+
 
 //?Problem -05
 
@@ -75,7 +76,7 @@ const toggleReadStatus = (book: Book) => {
   return { ...book, isRead: true };
 };
 const bookCreator = toggleReadStatus(myBook);
-// console.log(bookCreator);
+
 
 //?Problem -06
 
@@ -118,4 +119,4 @@ const getIntersection =(arr1:number[],arr2:number[])=>{
 }
 
 const arrNumber =getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
-console.log(arrNumber);
+
