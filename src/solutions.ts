@@ -12,17 +12,15 @@ const filterEvenNumbers = (even: number[]) => {
 
 const even = filterEvenNumbers([1, 2, 3, 4, 5, 6]);
 
-
 //?Problem-02
 //reverseString
 
 function reverseString(revers: string) {
   const reversingString = revers.split("").reverse().join("");
-  return reversingString
+  return reversingString;
 }
 
-const reverse=reverseString("typescript");
-
+const reverse = reverseString("typescript");
 
 //?Problem -03
 //check of type
@@ -35,7 +33,6 @@ const checkType = (type: number | string) => {
   }
 };
 const typeCheck = checkType(20);
-
 
 //?Problem-04
 
@@ -57,7 +54,6 @@ const getProperty = <X>(obj: X, key: keyof X) => {
 
 const property = getProperty(user, "Name");
 
-
 //?Problem -05
 
 interface Book {
@@ -77,7 +73,6 @@ const toggleReadStatus = (book: Book) => {
 };
 const bookCreator = toggleReadStatus(myBook);
 
-
 //?Problem -06
 
 class Person {
@@ -88,7 +83,7 @@ class Person {
     this.age = age;
   }
   getDetails() {
-    console.log(`Name: ${this.name}, Age: ${this.age}`);
+    return `Name: ${this.name}, Age: ${this.age}`;
   }
 }
 
@@ -99,24 +94,23 @@ class Student extends Person {
     this.grade = grade;
   }
   getDetails() {
-    console.log(`Name: ${this.name}, Age: ${this.age} ,Grade: ${this.grade}`);
+    return `Name: ${this.name}, Age: ${this.age} ,Grade: ${this.grade}`;
   }
 }
 
-const student =new Student("Alice", 20, "A")
-// student.getDetails()
+const student = new Student("Alice", 20, "A");
+console.log(student.getDetails());
 
 //?Problem-07
 
-const getIntersection =(arr1:number[],arr2:number[])=>{
-  const element:number[] =[]
-  for(let num of arr1){
-    if(arr2.includes(num)){
-      element.push(num)
+const getIntersection = (arr1: number[], arr2: number[]) => {
+  const element: number[] = [];
+  for (let num of arr1) {
+    if (arr2.includes(num)) {
+      element.push(num);
     }
   }
-  return element
-}
+  return element;
+};
 
-const arrNumber =getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])
-
+const arrNumber = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
